@@ -10,10 +10,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 	    <li class="nav-item" {% if request.GET.next != '/courier/' %} active {% endif%}>
-		    <a class="nav-link" href="{% url 'login-page' %}?next={% url 'customer' %}">Customer</a>
+		    <a class="nav-link" href="{% url 'login-page' %}?next={% url 'customer:home' %}">Customer</a>
 	    </li>
       <li class="nav-item" {% if request.GET.next == '/courier/' %} active {% endif%}>
-     <a class="nav-link" href="{% url 'login-page' %}?next={% url 'courier' %}">Courier</a> </li>
+     <a class="nav-link" href="{% url 'login-page' %}?next={% url 'courier:home' %}">Courier</a> </li>
     </ul>
     {% endif %}
     <ul class="navbar-nav ml-auto">

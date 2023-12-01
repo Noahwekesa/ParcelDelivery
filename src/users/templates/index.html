@@ -10,16 +10,16 @@
   	<h1 class="text-center mt-5 mb-5 font-weight-bold">Parcel Delivery</h1>
   </div>
 </div>
+
 </div>
 
-
-<div class="row">
+<div class="row mt-4">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">CUSTOMER</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Details</a>
+        <a href="{% url 'customer:home' %}" class="btn btn-primary">Details</a>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
       <div class="card-body">
         <h5 class="card-title">COURIER</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Details</a>
+        <a href="{% url 'courier:home' %}" class="btn btn-primary">Details</a>
       </div>
     </div>
   </div>
