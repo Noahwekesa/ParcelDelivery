@@ -7,9 +7,10 @@ Basic Information
 </b> <br>
 <div class="card bg-white mt-2 mb-5">
 	<div class="card-body">
-		<form method="POST">
+		<form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			{% bootstrap_form user_form %}
+			{% bootstrap_form customer_form %}
 			<input type="hidden" name="action" value="update_profile">
 			<button type="submit" class="btn btn-outline-dark">save</button>
 		</form>

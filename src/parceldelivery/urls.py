@@ -19,7 +19,8 @@ from django.urls import include, path
 from users.views import home_view, courierView, register_page
 from customers.views import customerView, profile_page
 from django.contrib.auth import views as auth_views
-
+from django.conf import settings
+from django.conf.urls.static import static
 customer_urlpatterns = [
     path('', customerView, name='home'),
     path('profile/', profile_page, name='profile')
@@ -37,3 +38,6 @@ urlpatterns = [
     path('register/', register_page, name='register')
 
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
